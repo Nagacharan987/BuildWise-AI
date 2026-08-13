@@ -1,22 +1,56 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BuildWise AI</title><link rel="stylesheet" href="style.css"></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuildWise AI | Smart Construction Planning</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<nav><b>🏗️ BuildWise <span>AI</span></b><div><a href="#planner">Planner</a><a href="#verify">Verify</a></div></nav>
-<header class="hero"><div><small>AI-ASSISTED CONSTRUCTION PLANNING</small><h1>Build smarter.<br><em>Build with confidence.</em></h1>
-<p>Plan a construction project, explore preliminary costs and verify important documents from one simple dashboard.</p><a class="btn" href="#planner">Start a Project →</a></div>
-<div class="heroCard"><small>PROJECT SNAPSHOT</small><h2>₹43.2L</h2><p>Example G+1 home estimate</p><hr><small>Planning • Estimation • Verification</small></div></header>
-<section class="cards"><div><b>🤖 AI Planner</b><p>Turn requirements into a structured preliminary plan.</p></div><div><b>💰 Cost Estimate</b><p>Explore indicative cost and material quantities.</p></div><div><b>🔐 Document Trust</b><p>Create a SHA-256 fingerprint for integrity checks.</p></div></section>
+<nav><div class="brand">🏗️ BuildWise <span>AI</span></div><div class="links"><a href="#planner">Planner</a><a href="#assistant">AI Assistant</a><a href="#verify">Verify</a></div></nav>
+
+<header class="hero">
+<div><small>AI-ASSISTED CONSTRUCTION PLANNING</small><h1>Build smarter.<br><em>Build with confidence.</em></h1>
+<p>Plan your construction project, explore preliminary estimates and get structured planning guidance from one simple platform.</p>
+<a class="btn" href="#assistant">Ask BuildWise AI →</a></div>
+<div class="hero-card"><small>BUILDWISE AI</small><h2>One place for your project.</h2><p>Planning • Estimation • Guidance • Document Trust</p><div class="pill">Prototype ready</div></div>
+</header>
+
+<section class="cards">
+<div><b>🤖 AI Assistant</b><p>Describe your project and receive structured planning guidance.</p></div>
+<div><b>💰 Estimator</b><p>Explore preliminary construction costs and material quantities.</p></div>
+<div><b>🔐 Document Trust</b><p>Create SHA-256 fingerprints for document integrity checks.</p></div>
+</section>
+
 <main>
-<section id="planner" class="panel"><small>01 / PROJECT PLANNER</small><h2>Create your construction plan</h2>
+<section id="planner" class="panel">
+<small>01 / PROJECT PLANNER</small><h2>Create your construction plan</h2>
 <div class="grid">
-<label>Location<input id="location" value="Warangal"></label><label>Plot area (sq.ft)<input id="area" type="number" value="1200"></label>
-<label>Floors<input id="floors" type="number" value="2"></label><label>Bedrooms<input id="beds" type="number" value="3"></label>
-<label>Bathrooms<input id="baths" type="number" value="3"></label><label>Budget (₹)<input id="budget" type="number" value="3000000"></label>
-</div><button class="btn" onclick="plan()">Generate Preliminary Plan</button></section>
-<section class="panel" id="estimate"><small>02 / PROJECT ESTIMATE</small><h2>Project summary</h2><div id="result"><p>Enter your details and generate a plan.</p></div></section>
-<section class="panel" id="verify"><small>03 / DOCUMENT TRUST</small><h2>Document verification</h2><p>Generate a SHA-256 fingerprint. A production system can anchor it to a blockchain.</p>
-<input id="doc" placeholder="Enter document name or text"><button class="btn light" onclick="verify()">Generate Fingerprint</button><pre id="hash"></pre></section>
-<div class="notice"><b>Important:</b> Estimates are preliminary and educational. Actual design, quantities, permissions and costs must be confirmed by qualified professionals.</div>
-</main><footer>BuildWise AI • AI × Construction • Prototype</footer>
-<script src="app.js"></script></body></html>
+<label>Location<input id="location" value="Warangal"></label>
+<label>Plot area (sq.ft)<input id="area" type="number" value="1200"></label>
+<label>Floors<input id="floors" type="number" value="2"></label>
+<label>Bedrooms<input id="beds" type="number" value="3"></label>
+<label>Bathrooms<input id="baths" type="number" value="3"></label>
+<label>Budget (₹)<input id="budget" type="number" value="3000000"></label>
+</div><button class="btn" onclick="plan()">Generate Preliminary Plan</button>
+</section>
+
+<section id="estimate" class="panel"><small>02 / PROJECT ESTIMATE</small><h2>Project summary</h2><div id="result"><p>Generate a plan to see the summary.</p></div></section>
+
+<section id="assistant" class="panel ai-panel">
+<small>03 / BUILDWISE AI ASSISTANT</small><h2>Ask about your construction project</h2>
+<p class="muted">Describe what you want to build. This prototype provides structured planning guidance. The next version will connect this interface to a secure AI backend.</p>
+<textarea id="question" rows="5" placeholder="Example: I have a 1200 sq.ft plot in Warangal, ₹30 lakh budget and want a 3-bedroom G+1 house. What should I plan first?"></textarea>
+<button class="btn" onclick="askAI()">Get BuildWise Guidance</button>
+<div id="answer" class="answer"><p>Your guidance will appear here.</p></div>
+</section>
+
+<section id="verify" class="panel"><small>04 / DOCUMENT TRUST</small><h2>Document verification</h2>
+<p class="muted">Generate a SHA-256 fingerprint. A production system can anchor the fingerprint to a blockchain.</p>
+<input id="doc" placeholder="Enter document name or text"><button class="btn light" onclick="verify()">Generate Fingerprint</button><pre id="hash"></pre>
+</section>
+
+<div class="notice"><b>Important:</b> BuildWise AI provides preliminary educational guidance and estimates. Actual structural design, quantities, permissions and project costs must be confirmed by qualified professionals.</div>
+</main>
+<footer>BuildWise AI • AI × Construction • Prototype for demonstration</footer>
+<script src="app.js"></script>
+</body></html>
