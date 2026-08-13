@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuildWise AI</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>🏗️ BuildWise AI</h1><p>Construction planning made simple</p></header>
+<main>
+<section class="card">
+<h2>Project Planner</h2>
+<label>Plot area (sq.ft)<input id="area" type="number" value="1200"></label>
+<label>Number of floors<input id="floors" type="number" value="1"></label>
+<label>Bedrooms<input id="beds" type="number" value="3"></label>
+<label>Budget (₹)<input id="budget" type="number" value="2500000"></label>
+<button onclick="plan()">Generate AI Plan</button>
+</section>
+<section id="result" class="card"><h2>Result</h2><p>Enter your project details and click Generate AI Plan.</p></section>
+<section class="card">
+<h2>Document Verification Demo</h2>
+<input id="doc" type="text" placeholder="Type document name or content">
+<button onclick="verify()">Generate Fingerprint</button>
+<pre id="hash"></pre>
+</section>
+</main>
+<script src="app.js"></script></body></html>
