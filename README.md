@@ -189,6 +189,32 @@ The platform generates:
 
 ---
 
+## 📸 Product Screenshots
+
+### 🏠 BuildWise AI Homepage
+
+The main interface provides access to construction planning, estimation, AI guidance, and document verification.
+
+![BuildWise AI Homepage](screenshots/homepage.png)
+
+### 📐 Project Planner & Estimator
+
+Users can enter project requirements and receive preliminary built-up area, cost, and material estimates.
+
+![BuildWise AI Planner](screenshots/planner.png)
+
+### 🤖 AI Construction Assistant
+
+The BuildWise AI Assistant provides structured preliminary guidance based on construction requirements.
+
+![BuildWise AI Assistant](screenshots/ai-assistant.png)
+
+### 🔐 Document Verification
+
+BuildWise generates a SHA-256 fingerprint that can be used as a document-integrity identifier.
+
+![BuildWise Document Verification](screenshots/verification.png)
+
 ## 🗺️ Roadmap
 
 ### Phase 1 — Completed ✅
