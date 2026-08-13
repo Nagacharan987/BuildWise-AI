@@ -1,15 +1,16 @@
 # BuildWise AI
+AI-assisted construction planning and document verification prototype.
 
-AI-assisted construction planning and document verification MVP.
+Live demo: https://nagacharan987.github.io/BuildWise-AI/
 
-## What it does
-- Collects plot size, floors, rooms and budget.
-- Produces a preliminary construction plan.
-- Estimates rough construction cost.
-- Estimates basic material quantities.
-- Creates a document fingerprint for verification.
+## Features
+- Professional construction planner
+- Preliminary cost estimate
+- Preliminary material quantities
+- SHA-256 document fingerprint
+- Responsive interface
 
-> This is an educational MVP. Estimates are not professional engineering or financial advice.
+## Roadmap
+AI assistant, user accounts, database, engineer marketplace and blockchain anchoring.
 
-## Run
-Open `index.html` in a browser. No installation is required.
+This is an educational prototype; qualified professionals must verify real construction decisions.

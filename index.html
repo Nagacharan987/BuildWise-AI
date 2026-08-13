@@ -1,24 +1,22 @@
-<!doctype html>
-<html>
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BuildWise AI</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<header><h1>🏗️ BuildWise AI</h1><p>Construction planning made simple</p></header>
+<nav><b>🏗️ BuildWise <span>AI</span></b><div><a href="#planner">Planner</a><a href="#verify">Verify</a></div></nav>
+<header class="hero"><div><small>AI-ASSISTED CONSTRUCTION PLANNING</small><h1>Build smarter.<br><em>Build with confidence.</em></h1>
+<p>Plan a construction project, explore preliminary costs and verify important documents from one simple dashboard.</p><a class="btn" href="#planner">Start a Project →</a></div>
+<div class="heroCard"><small>PROJECT SNAPSHOT</small><h2>₹43.2L</h2><p>Example G+1 home estimate</p><hr><small>Planning • Estimation • Verification</small></div></header>
+<section class="cards"><div><b>🤖 AI Planner</b><p>Turn requirements into a structured preliminary plan.</p></div><div><b>💰 Cost Estimate</b><p>Explore indicative cost and material quantities.</p></div><div><b>🔐 Document Trust</b><p>Create a SHA-256 fingerprint for integrity checks.</p></div></section>
 <main>
-<section class="card">
-<h2>Project Planner</h2>
-<label>Plot area (sq.ft)<input id="area" type="number" value="1200"></label>
-<label>Number of floors<input id="floors" type="number" value="1"></label>
-<label>Bedrooms<input id="beds" type="number" value="3"></label>
-<label>Budget (₹)<input id="budget" type="number" value="2500000"></label>
-<button onclick="plan()">Generate AI Plan</button>
-</section>
-<section id="result" class="card"><h2>Result</h2><p>Enter your project details and click Generate AI Plan.</p></section>
-<section class="card">
-<h2>Document Verification Demo</h2>
-<input id="doc" type="text" placeholder="Type document name or content">
-<button onclick="verify()">Generate Fingerprint</button>
-<pre id="hash"></pre>
-</section>
-</main>
+<section id="planner" class="panel"><small>01 / PROJECT PLANNER</small><h2>Create your construction plan</h2>
+<div class="grid">
+<label>Location<input id="location" value="Warangal"></label><label>Plot area (sq.ft)<input id="area" type="number" value="1200"></label>
+<label>Floors<input id="floors" type="number" value="2"></label><label>Bedrooms<input id="beds" type="number" value="3"></label>
+<label>Bathrooms<input id="baths" type="number" value="3"></label><label>Budget (₹)<input id="budget" type="number" value="3000000"></label>
+</div><button class="btn" onclick="plan()">Generate Preliminary Plan</button></section>
+<section class="panel" id="estimate"><small>02 / PROJECT ESTIMATE</small><h2>Project summary</h2><div id="result"><p>Enter your details and generate a plan.</p></div></section>
+<section class="panel" id="verify"><small>03 / DOCUMENT TRUST</small><h2>Document verification</h2><p>Generate a SHA-256 fingerprint. A production system can anchor it to a blockchain.</p>
+<input id="doc" placeholder="Enter document name or text"><button class="btn light" onclick="verify()">Generate Fingerprint</button><pre id="hash"></pre></section>
+<div class="notice"><b>Important:</b> Estimates are preliminary and educational. Actual design, quantities, permissions and costs must be confirmed by qualified professionals.</div>
+</main><footer>BuildWise AI • AI × Construction • Prototype</footer>
 <script src="app.js"></script></body></html>
